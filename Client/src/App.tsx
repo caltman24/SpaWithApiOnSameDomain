@@ -22,13 +22,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Vite + React + Asp.net Web API</h1>
-      <h3>On The same domain</h3>
-      <ApiData data={apiData} />
-      {user ? (
-        <>
-          <div style={{ marginTop: "15px" }}>
-            <div>
+      <header className="header">
+        {user ? (
+          <>
+            <div className="user_info">
               <img src={user.picture} alt="" />
               <p>{user.name}</p>
             </div>
@@ -37,15 +34,20 @@ function App() {
             >
               Logout
             </button>
-          </div>
-        </>
-      ) : (
-        <>
-          <div style={{ marginTop: "15px" }}>
+          </>
+        ) : (
+          <>
+            <div></div>
             <button onClick={() => loginWithRedirect()}>Login</button>
-          </div>
-        </>
-      )}
+          </>
+        )}
+      </header>
+
+      <main className="main">
+        <h2>React + .NET API</h2>
+        <h3>On The same domain</h3>
+        <ApiData data={apiData} />
+      </main>
     </div>
   );
 }
