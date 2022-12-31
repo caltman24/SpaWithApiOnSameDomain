@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SpaWithApiOnSameDomain.Controllers;
 
 [ApiController]
 [Route("api/test")]
+[Authorize]
 public class TestController : ControllerBase
 {
     [HttpGet]

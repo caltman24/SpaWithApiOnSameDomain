@@ -10,6 +10,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       domain="dev-wo5np8pa74qkv8lk.us.auth0.com"
       clientId="xxEZO9Qx45RYUOxZeOoBcsNU8f1hIfWP"
       redirectUri={window.location.origin}
+      audience="https://todos"
     >
       <App />
     </Auth0Provider>
