@@ -31,6 +31,10 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+// We need this when working with a docker container.
+// The docker container will run the application in http until you
+// manage to get a local ssl cert.
+// Hosting provider should take care of the ssl. i.g: Railway or Render
 if (!app.Environment.IsDevelopment()) app.Urls.Add("http://0.0.0.0:5000");
 
 
